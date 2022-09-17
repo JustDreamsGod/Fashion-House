@@ -9,26 +9,43 @@
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/mobile.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="header__top">
-                <div class="logo">
-                    <a class="logo__link" href="#">
-                        <img class="logo__icon" src="./img/logo.svg" alt="Logo">
+    <div class="wrapper">
+        <div id="back_to_top" class="back-to-top">
+            <img src="./img/back-to-top.svg" alt="Back to top button">
+            </svg>
+        </div>
+        <header class="header">
+            <div class="header__container">
+                <div class="header__logo">
+                    <a href="#">
+                        <img class="header__logo-icon" src="./img/logo.svg" alt="Logo">
                     </a>
                 </div>
-                <nav class="header__nav header__nav-effect">
-                    <a class="header__nav-link" href="#">Для неё</a>
-                    <a class="header__nav-link" href="#">Для него</a>
-                    <a class="header__nav-link" href="#">new collection</a>
-                    <a class="header__nav-link" href="#">sale</a>
-                </nav>
+                <div class="header__menu">
+                    <nav class="menu__body">
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">Для неё</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">Для него</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">new collection</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">sale</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
                 <div class="header__icons">
                     <a class="header__icon-link" href="#">
                         <img class="header__icons-img" src="./img/add.svg" alt="Add">
@@ -41,66 +58,172 @@
                     </a>
                 </div>
             </div>
-            <div class="header__body">
-                <div class="header__body-text">
-                    <h1 class="header__body-title title">
-                        Твой амбассадор в мире моды
-                    </h1>
-                    <div class="button">
-                        <a class="button__link" href="#">
-                            Перейти
-                            <img src="./img/header-arrow.svg" alt="Arrow">
-                        </a>
+        </header>
+
+        <section class="slider">
+            <div class="slider__container">
+                <div class="slider__items">
+                    <div class="slider__items-text">
+                        <h1 class="slider__items-title">
+                            Твой амбассадор в мире моды
+                        </h1>
+                        <div class="button">
+                            <a class="button__link" href="#">
+                                Перейти
+                                <img src="./img/header-arrow.svg" alt="Arrow">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slider__items-img">
+                        <img src="./img/header-body-img.png" alt="Photo">
                     </div>
                 </div>
-                <div class="header__body-img">
-                    <img src="./img/header-body-img.png" alt="Photo">
-                </div>
-                <button class="header__prev-btn">
+                <button class="slider__items__prev-btn" id="btn-prev">
                     <img src="./img/header-left-btn.svg" alt="Preveos">
                 </button>
-                <button class="header__next-btn">
-                    <img src="./img/header-right-btn.svg" alt="Next">
+                <button class="slider__items__next-btn">
+                    <img src="./img/header-right-btn.svg" id="btn-next" alt="Next">
                 </button>
             </div>
-        </div>
-    </header>
-    <section class="new-collection">
-        <div class="container-narrow">
-            <h2 class="new-collection__title">new collection</h2>
-            <div class="new-collection__cards">
-                <a class="new-collection__cards-item" href="#">
-                    <div class="new__collection__img">
-                        <img class="new__collection__img--blurr" src="./img/for-her.png" alt="for-her">
-                    </div>
-                    <h5 class="cards-item-title">Для неё </h5>
-                    <p class="cards-item-text">Следуй за трендами </p>
-                </a>
-                <a class="new-collection__cards-item" href="#">
-                    <div class="new__collection__img">
-                        <img class="new__collection__img--blurr" src="./img/for-him.png" alt="for-him">
-                    </div>
-                    <h5 class="cards-item-title">Для него </h5>
-                    <p class="cards-item-text">Выбирай лучшее </p>
-                </a>
-                <a class="new-collection__cards-item" href="#">
-                    <div class="new__collection__img">
-                        <img class="new__collection__img--blurr" src="./img/shoes.png" alt="shoes">
-                    </div>
-                    <h5 class="cards-item-title">Обувь </h5>
-                    <p class="cards-item-text">Уверенность в каждом шаге </p>
-                </a>
-                <a class="new-collection__cards-item" href="#">
-                    <div class="new__collection__img">
-                        <img class="new__collection__img--blurr" src="./img/accessories.png" alt="accessories">
-                    </div>
-                    <h5 class="cards-item-title">Аксессуары </h5>
-                    <p class="cards-item-text">Блеск роскоши в каждом изделии </p>
-                </a>
+        </section>
+        <section class="new-collection">
+            <div class="container-narrow">
+                <h2 class="new-collection__title">new collection</h2>
+                <div class="new-collection__cards">
+                    <a class="new-collection__cards-item" href="#">
+                        <div class="new__collection__img">
+                            <img class="new__collection__img--blurr" src="./img/for-her.png" alt="for-her">
+                        </div>
+                        <h5 class="cards-item-title">Для неё </h5>
+                        <p class="cards-item-text">Следуй за трендами </p>
+                    </a>
+                    <a class="new-collection__cards-item" href="#">
+                        <div class="new__collection__img">
+                            <img class="new__collection__img--blurr" src="./img/for-him.png" alt="for-him">
+                        </div>
+                        <h5 class="cards-item-title">Для него </h5>
+                        <p class="cards-item-text">Выбирай лучшее </p>
+                    </a>
+                    <a class="new-collection__cards-item" href="#">
+                        <div class="new__collection__img">
+                            <img class="new__collection__img--blurr" src="./img/shoes.png" alt="shoes">
+                        </div>
+                        <h5 class="cards-item-title">Обувь </h5>
+                        <p class="cards-item-text">Уверенность в каждом шаге </p>
+                    </a>
+                    <a class="new-collection__cards-item" href="#">
+                        <div class="new__collection__img">
+                            <img class="new__collection__img--blurr" src="./img/accessories.png" alt="accessories">
+                        </div>
+                        <h5 class="cards-item-title">Аксессуары </h5>
+                        <p class="cards-item-text">Блеск роскоши в каждом изделии </p>
+                    </a>
 
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+        <section class="subscribe">
+            <div class="container-narrow">
+                <div class="subscribe__items">
+                    <div class="subscribe__items__text">
+                        <h2 class="subscribe__items__text-title">будь в курсе всех модных трендов этого сезона</h2>
+                        <div class="subscribe__items__text-p">Расскажем тебе обо всем, что происходит в мире моды, новых
+                            коллекциях, скидках, розыгрышах и не
+                            только </div>
+                    </div>
+                    <div class="subscribe__items__form">
+                        <input class="subscribe__items__form-input" type="text" placeholder="e-mail">
+                        <a class="subscribe__items__form-btn" href="#">Подписаться</a>
+                        <p class="subscribe__items__form-text">Нажимая на кнопку «Подписаться», вы соглашаетесь с
+                            политикой
+                            конфиденциальности и обработки
+                            персональных данных</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="brands">
+            <div class="container-narrow">
+                <div class="brands__items">
+                    <a class="brand__link" href="">
+                        <img class="brand__link-logo" src="./img/brands/chanel-1.svg" alt="chanel">
+                    </a>
+                    <a class="brand__link" href="">
+                        <img class="brand__link-logo" src="./img/brands/vans-2.svg" alt="vans">
+                    </a>
+                    <a class="brand__link" href="">
+                        <img class="brand__link-logo" src="./img/brands/versace-3.svg" alt="versache">
+                    </a>
+                    <a class="brand__link" href="">
+                        <img class="brand__link-logo" src="./img/brands/lousvuiton-4.svg" alt="lous vuiton">
+                    </a>
+                    <a class="brand__link" href="">
+                        <img class="brand__link-logo" src="./img/brands/converse-5.svg" alt="converse">
+                    </a>
+                    <a class="brand__link" href="">
+                        <img class="brand__link-logo" src="./img/brands/fendi-6.svg" alt="frndi">
+                    </a>
+                    <a class="brand__link" href="">
+                        <img class="brand__link-logo" src="./img/brands/pandora-7.svg" alt="pandora">
+                    </a>
+                    <a class="brand__link" href="">
+                        <img class="brand__link-logo" src="./img/brands/lacoste-8.svg" alt="lacoste">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__body">
+                    <div class="footer__logo">
+                        <a class="logo__link" href="#">
+                            <img class="logo__icon" src="./img/logo-white.svg" alt="Logo">
+                        </a>
+                    </div>
+                    <div class="footer__body-nav">
+                        <ul class="footer__body__info-list">
+                            <li class="footer__body__info-link"><a href="#">Главная</a></li>
+                            <li class="footer__body__info-link"><a href="#">О нас</a></li>
+                            <li class="footer__body__info-link"><a href="#">Сотрудничество</a></li>
+                            <li class="footer__body__info-link"><a href="#">Контакты</a></li>
+                        </ul>
+                        <ul class="footer__body__nav-list">
+                            <li class="footer__body__nav-link"><a href="#">Каталог</a></li>
+                            <li class="footer__body__nav-link"><a href="#">sale</a></li>
+                            <li class="footer__body__nav-link"><a href="#">new collection</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__body-feedback">
+                        <a class="footer__body-feedback-link footer__body-feedback-link--undrln" href="#">Работа в
+                            компании</a>
+                        <span class="footer__body-feedback-link" href="#">Мы в соц. сетях</span>
+                        <div class="footer__body-feedback__icons">
+                            <a href="#">
+                                <img src="./img/inst-logo.svg" alt="Instagram">
+                            </a>
+                            <a href="#">
+                                <img src="./img/tg-logo.svg" alt="Telegram">
+                            </a>
+                            <a href="#">
+                                <img src="./img/vk-logo.svg" alt="VK">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <div class="footer__bottom__link-wrap">
+                        © 2015-2022 Интернет-магазин
+                        <a class="footer__bottom-link" href="#">Fashion House </a>
+                    </div>
+                    <a class="footer__bottom-link" href="#">Политика конфиденциальности </a>
+                    <a class="footer__bottom-link" href="#">Карта сайта </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/slick.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
 

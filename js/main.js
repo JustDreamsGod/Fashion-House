@@ -1,20 +1,23 @@
-document.querySelectorAll('.header__nav-link').forEach((elem) => {
+$(window).scroll(function () {
+    let scrolled = $(window).scrollTop();
+    if (scrolled > 100) {
+        $('#back_to_top').addClass('active');
+    } else {
+        $('#back_to_top').removeClass('active');
+    }
+});
+$('#back_to_top').click(function () {
+    $('body, html').animate({ scrollTop: 0 }, 1000)
+});
+$(window).scroll(function () {
+    let scrolled = $(window).scrollTop();
+    if (scrolled > 100) {
+        $('#back_to_top').addClass('active');
+    } else {
+        $('#back_to_top').removeClass('active');
+    }
+});
+$('#back_to_top').click(function () {
+    $('body, html').animate({ scrollTop: 0 }, 1000)
+});
 
-    elem.onmouseenter =
-        elem.onmouseleave = (e) => {
-
-            const tolerance = 10
-
-            const left = 0
-            const right = elem.clientWidth
-
-            let x = e.pageX - elem.offsetLeft
-
-            if (x - tolerance < left) x = left
-            if (x + tolerance > right) x = right
-
-            elem.style.setProperty('--x', `${x}px`)
-
-        }
-
-})
