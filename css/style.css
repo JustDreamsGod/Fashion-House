@@ -146,7 +146,7 @@ body {
 }
 
 .hover-underline-animation:hover {
-    font-weight: 700;
+    text-shadow: 0 0 .9px #BFB3A4, 0 0 .9px #BFB3A4, 0 0 .9px #BFB3A4;
     color: #BFB3A4;
 }
 
